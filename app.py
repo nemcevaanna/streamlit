@@ -18,9 +18,7 @@ os.makedirs("model", exist_ok=True)
 if not os.path.exists(MODEL_PATH):
     gdown.download("https://drive.google.com/uc?id=1eppWxpU2WVVsxw4RGx4Au3n7I84IjkPZ", MODEL_PATH, quiet=False)
 
-tf.compat.v1.disable_eager_execution()
-# Загружаем с параметрами совместимости
-model = load_model(MODEL_PATH, compile=False)
+model = load_model(MODEL_PATH)
 
 # Классы
 classes = {0: 'Capsicum', 1: 'Carrot', 2: 'Cucumber', 3: 'Potato', 4: 'Tomato'}
