@@ -1,0 +1,10 @@
+streamlit
+requests
+numpy
+Pillow
+matplotlib
+streamlit-drawable-canvas
+fastapi
+uvicorn
+tensorflow
+opencv-python-headless
