@@ -44,7 +44,7 @@
 1. **Клонируйте репозиторий** или скачайте архив:
 
    ```bash
-   git clone https://github.com/Nota02/streamlit.git
+   git clone https://github.com/nemcevaanna/streamlit.git
    cd streamlit
    ```
 
