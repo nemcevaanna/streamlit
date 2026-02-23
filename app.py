@@ -7,17 +7,16 @@ import cv2
 import io
 from PIL import Image
 import gdown
+import os
 
 app = FastAPI(title="Image Classifier API")
 
 # Загрузка модели
-FILE_ID = os.getenv('GOOGLE_DRIVE_FILE_ID', '1eppWxpU2WVVsxw4RGx4Au3n7I84IjkPZ')
 MODEL_PATH = "model/T5_3_best_model.h5"
+os.makedirs("model", exist_ok=True)
 
 if not os.path.exists(MODEL_PATH):
-    os.makedirs("model", exist_ok=True)
-    url = f"https://drive.google.com/uc?id={FILE_ID}"
-    gdown.download(url, MODEL_PATH, quiet=False)
+    gdown.download("https://drive.google.com/uc?id=1eppWxpU2WVVsxw4RGx4Au3n7I84IjkPZ", MODEL_PATH, quiet=False)
 
 model = load_model(MODEL_PATH)
 
