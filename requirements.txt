@@ -1,7 +1,7 @@
 streamlit
 requests
-tensorflow==2.18.0
-numpy==1.23.5
+tensorflow==2.20.0
+numpy
 Pillow
 matplotlib
 streamlit-drawable-canvas
