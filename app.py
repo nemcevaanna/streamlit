@@ -12,7 +12,7 @@ import os
 app = FastAPI(title="Image Classifier API")
 
 # Загрузка модели
-MODEL_PATH = "model/T5_3_best_model.h5"
+MODEL_PATH = "model/best_model.keras"
 os.makedirs("model", exist_ok=True)
 
 if not os.path.exists(MODEL_PATH):
