@@ -16,7 +16,7 @@ MODEL_PATH = "model/best_model.keras"
 os.makedirs("model", exist_ok=True)
 if not os.path.exists(MODEL_PATH):
     gdown.download(
-        "https://drive.google.com/uc?id=1089S8paExVJWgjMLROu16rOnGF1upA-9",
+        "https://drive.google.com/uc?id=12ButJlsg2szPcbN4Jul3CcwuRDQND4zj",
         MODEL_PATH,
         quiet=False,
         fuzzy=True
