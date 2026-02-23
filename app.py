@@ -14,10 +14,13 @@ app = FastAPI(title="Image Classifier API")
 # Загрузка модели
 MODEL_PATH = "model/best_model.keras"
 os.makedirs("model", exist_ok=True)
-
 if not os.path.exists(MODEL_PATH):
-    gdown.download("https://drive.google.com/uc?id=1089S8paExVJWgjMLROu16rOnGF1upA-9", MODEL_PATH, quiet=False)
-
+    gdown.download(
+        "https://drive.google.com/uc?id=1089S8paExVJWgjMLROu16rOnGF1upA-9",
+        MODEL_PATH,
+        quiet=False,
+        fuzzy=True
+    )
 model = load_model(MODEL_PATH)
 
 # Классы
