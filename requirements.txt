@@ -1,11 +1,11 @@
 streamlit
 requests
+tensorflow==2.15.0
 numpy
 Pillow
 matplotlib
 streamlit-drawable-canvas
 fastapi
 uvicorn
-tensorflow
 opencv-python-headless
 gdown
