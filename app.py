@@ -10,7 +10,13 @@ from PIL import Image
 app = FastAPI(title="Image Classifier API")
 
 # Загрузка модели
-model = load_model("model/T5_3_best_model.h5")
+MODEL_PATH = load_model("model/T5_3_best_model.h5")
+
+if not os.path.exists(MODEL_PATH):
+    os.makedirs("model", exist_ok=True)
+    gdown.download("https://drive.google.com/uc?id=1eppWxpU2WVVsxw4RGx4Au3n7I84IjkPZ", MODEL_PATH, quiet=False)
+
+model = load_model(MODEL_PATH)
 
 # Классы
 classes = {0: 'Capsicum', 1: 'Carrot', 2: 'Cucumber', 3: 'Potato', 4: 'Tomato'}
